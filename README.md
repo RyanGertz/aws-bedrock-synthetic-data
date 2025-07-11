@@ -208,7 +208,7 @@ Ideas for making this project more advanced:
 - [AWS Bedrock Documentation](https://docs.aws.amazon.com/bedrock/)
 - [Python JSON Documentation](https://docs.python.org/3/library/json.html)
 - [boto3 Documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
-- [Synthetic Data Best Practices](https://www.synthetic-data.com/)
+- [Synthetic Data Reading](https://aws.amazon.com/what-is/synthetic-data/)
 
 ---
 
