@@ -117,14 +117,6 @@ Modify the prompt in `generate_synthetic_students()` to include additional field
 "emergency_contact": "string",
 ```
 
-### Change the Output Format
-Modify the file saving section to use different formats:
-```python
-# Save as CSV, XML, or other formats
-import csv
-# Add CSV conversion code
-```
-
 ## Understanding the Generated Data
 
 The code generates realistic student records with these fields:
