@@ -168,7 +168,6 @@ Sometimes the AI might generate malformed JSON:
 - **Cost Awareness**: Each API call to AWS Bedrock costs money (usually just a few cents per request)
 - **Rate Limits**: AWS has limits on how many requests you can make per minute
 - **Data Privacy**: This generates synthetic data only - no real student information is used
-- **Realistic but Fake**: The data looks realistic but is entirely AI-generated
 
 ## Use Cases for Synthetic Data
 
@@ -186,14 +185,6 @@ If you run into issues:
 3. Look up the specific error message online
 4. Try running the code with fewer students first (num_students=1)
 
-## Extending This Project
-
-Ideas for making this project more advanced:
-- Add data validation to ensure all fields are properly formatted
-- Create different types of synthetic data (faculty, courses, grades)
-- Build a web interface for generating data
-- Add export options for different file formats
-- Include data relationships (students enrolled in specific courses)
 
 ## Resources for Further Learning
 
