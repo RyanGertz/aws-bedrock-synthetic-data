@@ -176,7 +176,7 @@ This type of synthetic data generation is useful for:
 - **Testing Applications**: Test your software with realistic data
 - **Database Development**: Populate test databases
 - **Machine Learning**: Train models without using real personal data
-- **Privacy Protection**: Develop systems without exposing real student information
+- **Privacy Protection**: Develop systems without exposing real information
 
 ## Getting Help
 
