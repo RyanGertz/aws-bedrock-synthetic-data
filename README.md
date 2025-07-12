@@ -16,7 +16,7 @@ Feel free to reach out if you have questions about:
 ## Video Tutorial
 
 For a complete walkthrough of this project, check out my video explanation:
-[AI Summer Camp Tutorial - Generating Synthetic Data with LLM's](https://drive.google.com/file/d/1gbD7YxdkLRjDaH01TWElBIP94qWS0_zI/view?usp=sharing)
+[AI Summer Camp Tutorial - Generating Synthetic Data with LLMs](https://drive.google.com/file/d/1gbD7YxdkLRjDaH01TWElBIP94qWS0_zI/view?usp=sharing)
 
 ## What You'll Learn
 
@@ -71,7 +71,6 @@ This function handles communication with the AI model:
 - Sends your request to Claude 3.5 Sonnet
 - Handles errors and automatically retries if AWS is busy
 - Returns the AI's response as text
-- Includes built-in retry logic with exponential backoff
 
 #### Function 2: `generate_synthetic_students(num_students)`
 This function creates the prompt for generating student data:
@@ -194,7 +193,6 @@ If you run into issues:
 ## Resources for Further Learning
 
 - [AWS Bedrock Documentation](https://docs.aws.amazon.com/bedrock/)
-- [Python JSON Documentation](https://docs.python.org/3/library/json.html)
 - [boto3 Documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
 - [Synthetic Data Reading](https://aws.amazon.com/what-is/synthetic-data/)
 
