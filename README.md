@@ -16,7 +16,7 @@ Feel free to reach out if you have questions about:
 ## Video Tutorial
 
 For a complete walkthrough of this project, check out my video explanation:
-[AI Summer Camp Tutorial - Getting Started with AWS Bedrock and Python](https://drive.google.com/file/d/1gbD7YxdkLRjDaH01TWElBIP94qWS0_zI/view?usp=sharing)
+[AI Summer Camp Tutorial - Generating Synthetic Data with LLM's](https://drive.google.com/file/d/1gbD7YxdkLRjDaH01TWElBIP94qWS0_zI/view?usp=sharing)
 
 ## What You'll Learn
 
