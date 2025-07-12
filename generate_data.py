@@ -54,9 +54,14 @@ def generate_synthetic_students(num_students: int):
 def main() -> None:
   students = generate_synthetic_students(num_students=5)
 
+
   with open("synthetic_students.json", "w") as f:
     f.write(students)
   print("Wrote synthetic_students.json")
+
+  students = json.loads(students)
+  for student in students:
+    print(f"Name: {student['first_name']} {student['last_name']}")
 
 if __name__ == "__main__":
   main()
