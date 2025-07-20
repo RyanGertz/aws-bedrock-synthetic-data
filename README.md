@@ -23,7 +23,6 @@ For a complete walkthrough of this project, check out my video explanation:
 - **Synthetic Data Generation**: Creating realistic fake data for testing and development
 - **Large Language Models (LLMs)**: AI systems that can understand and generate structured data
 - **AWS Bedrock**: Amazon's service that provides access to powerful AI models
-- **Python Programming**: Writing code to generate and save data files
 - **Data Validation with Pydantic**: Ensuring generated data meets specific requirements
 - **Structured Response Models**: Using type hints and validation to get reliable AI outputs
 
@@ -34,8 +33,7 @@ This project demonstrates how to use AI to generate synthetic student records wi
 1. **Defines Data Structure**: Uses Pydantic models to specify exactly what student data should look like
 2. **Connects to AWS Bedrock**: Uses the Instructor library with Claude 3.5 Sonnet for structured data generation
 3. **Validates Generated Data**: Automatically ensures all data meets requirements (proper formats, value ranges)
-4. **Handles API Retries**: Automatically retries requests if AWS is temporarily busy
-5. **Saves Data**: Outputs the validated data to a JSON file for use in other projects
+4. **Saves Data**: Outputs the validated data to a JSON file for use in other projects
 
 ## Prerequisites
 
@@ -66,7 +64,6 @@ pip install boto3 pydantic instructor
 
 **Instructor**: A library that makes it easy to get structured responses from AI models. Instead of getting plain text back, we get properly formatted data that matches our requirements.
 
-**Type Hints**: Python annotations that specify what type of data each field should contain (string, number, date, etc.).
 
 ### The Classes Explained
 
@@ -109,11 +106,6 @@ This function generates validated student data:
 - **Makes API call**: Sends request to Claude 3.5 Sonnet with `response_model=StudentList`
 - **Automatic validation**: Instructor ensures the response matches our StudentList model
 - **Error handling**: Retries on throttling errors with exponential backoff
-
-Key improvements over the old version:
-- **No JSON parsing needed**: Instructor handles conversion automatically
-- **Guaranteed structure**: Response will always match our StudentList model or fail clearly
-- **Type safety**: We get properly typed Python objects, not raw text
 
 #### Function 3: `main()`
 This is the main function that orchestrates everything:
@@ -161,32 +153,6 @@ Pydantic automatically validates all generated data:
 - **Number validation**: Ensures GPAs are floats, credits are integers
 - **Email format guidance**: Descriptions help AI generate proper email formats
 
-## Customizing The Code
-
-### Generate Different Numbers of Students
-Change the number of students generated:
-```python
-# In the main() function, change:
-student_data = generate_synthetic_students(num_students=10)  # Instead of 5
-```
-
-### Add New Fields
-Modify the Student class to include additional fields:
-```python
-class Student(BaseModel):
-    # Existing fields...
-    phone_number: str = Field(description="Phone number in format XXX-XXX-XXXX")
-    address: str = Field(description="Student's home address")
-    emergency_contact: str = Field(description="Emergency contact name")
-    scholarship_amount: float = Field(ge=0, le=50000, description="Annual scholarship amount")
-```
-
-### Modify Validation Rules
-Change constraints to fit your needs:
-```python
-gpa: float = Field(ge=0.0, le=4.0, description="Student's GPA between 0.0 and 4.0")
-# Changed minimum GPA from 2.0 to 0.0
-```
 
 ## Understanding the Generated Data
 
@@ -247,21 +213,6 @@ The AI generated data that doesn't match our Student model:
 - **Data Privacy**: This generates synthetic data only - no real student information is used
 - **Automatic Validation**: Pydantic ensures all data meets requirements before saving
 - **Type Safety**: Generated data has proper Python types, not just strings
-
-## Advantages of This Approach
-
-### Compared to the Old JSON-Based Method:
-- **Guaranteed Structure**: No more invalid JSON or missing fields
-- **Type Safety**: Get proper Python objects with correct data types
-- **Automatic Validation**: Built-in checks for data quality
-- **Better Error Messages**: Clear feedback when something goes wrong
-- **Easier to Extend**: Adding new fields is simple and safe
-
-### Professional Development Benefits:
-- **Industry Standard**: Pydantic is widely used in professional Python development
-- **API Development**: Essential skill for building web APIs with FastAPI
-- **Data Engineering**: Critical for data validation and ETL pipelines
-- **Machine Learning**: Important for validating training data and model inputs
 
 ## Use Cases for Synthetic Data
 
