@@ -14,8 +14,11 @@ Feel free to reach out if you have questions about:
 - General questions about AI and synthetic data generation
 
 ## Video Tutorial
+- For a walkthrough of installing VS Code and Python on windows [check this video out](https://drive.google.com/file/d/1hwVswLDUorcEJJz8gbOUracmx9Ufj3QE/view?usp=sharing)
 
-For a complete walkthrough of this project, check out my video explanation:
+- For a walkthrough of setting up a Virtual Environment with python in VS Code [check this repository out](https://github.com/RyanGertz/ai-summercamp-scripts)
+
+- For a complete walkthrough of this project, check out my video explanation:
 [AI Summer Camp Tutorial - Generating Synthetic Data with LLMs](https://drive.google.com/file/d/1gbD7YxdkLRjDaH01TWElBIP94qWS0_zI/view?usp=sharing)
 
 ## What You'll Learn
@@ -42,6 +45,7 @@ Before you start, you'll need:
 ### 1. Python Installation
 - Python 3.9 or higher installed on your computer
 - You can download it from [python.org](https://www.python.org/downloads/)
+- You can also watch [my video](https://drive.google.com/file/d/1hwVswLDUorcEJJz8gbOUracmx9Ufj3QE/view?usp=drive_link) explaning how to install it on Windows
 
 ### 2. AWS Account Setup
 - An AWS account
